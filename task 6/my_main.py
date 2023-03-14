@@ -1,3 +1,6 @@
+"""
+Main module for game "blukachka in Drohobych"
+"""
 import my_game
 
 # St. Pylyp Orlyk
@@ -163,12 +166,12 @@ while dead is False:
                 else:
                     print("Unfortunately, you haven't enough gold to give")
                 break
-            elif command2 == 'take':
+            if command2 == 'take':
                 backpack.append(inhabitant_kind.number)
                 print("Call if you need my help")
                 print("See you")
                 break
-            elif command2 == 'continue':
+            if command2 == 'continue':
                 break
             else:
                 print(f"I don't know how to {command2}\nTry again")
