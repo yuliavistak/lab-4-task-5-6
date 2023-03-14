@@ -1,3 +1,6 @@
+"""
+Class for game "blukachka in Drohobych"
+"""
 class Character:
     """
     Class of all characters of each type
@@ -8,9 +11,15 @@ class Character:
         self.message = ''
 
     def set_description(self, description):
+        """
+        Adds description of character
+        """
         self.description = description
 
     def describe(self):
+        """
+        Describes character in text
+        """
         print(f"{self.name} is here!")
         print("~~~~~~~~~~~~")
         print(self.description)
@@ -29,12 +38,6 @@ class Killer(Character):
         """
         return fight_with == self.weakness
 
-    def add_description(self):
-        """
-        Adds general information
-        """
-        self.description += "(If yes, print 'fight')'"
-
 class Zbuj(Character):
     """
     Enemy who robbs the rich
@@ -42,7 +45,6 @@ class Zbuj(Character):
     def __init__(self, name, item) -> None:
         super().__init__(name)
         self.stolen = item
-
 
 class KindLaydak(Character):
     """
@@ -54,6 +56,9 @@ class KindLaydak(Character):
         self.hint = None
 
     def set_hint(self, hint):
+        """
+        Adds a hint that person says
+        """
         self.hint = hint
 
 class Kavaler(Character):
@@ -76,21 +81,39 @@ class Street:
         self.bad_character = None
 
     def set_description(self, description):
+        """
+        Adds description of the street
+        """
         self.description = description
 
     def set_kind_character(self, person):
+        """
+        Adds kind charcter on the street
+        """
         self.kind_character = person
 
     def get_kind_character(self):
+        """
+        Determines if there is a kind character
+        """
         return self.kind_character
 
     def set_bad_character(self, person):
+        """
+        Adds bad charcter on the street
+        """
         self.bad_character = person
 
     def get_bad_character(self):
+        """
+        Determines if there is a bad character
+        """
         return self.bad_character
 
     def get_details(self):
+        """
+        Describes street in text
+        """
         print(self.description)
         print('--------------------')
         print(self.name + '\n')

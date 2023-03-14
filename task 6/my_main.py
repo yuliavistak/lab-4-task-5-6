@@ -2,7 +2,7 @@ import my_game
 
 # St. Pylyp Orlyk
 orlyk = my_game.Street('St. Pylyp Orlyk')
-orlyk.set_description("Home")
+orlyk.set_description("First location")
 
 olesia = my_game.Zbuj("Olesia", "gold")
 olesia.set_description("The thief of all that shines\nShe stole gold from \
@@ -19,7 +19,7 @@ orlyk.set_kind_character(mariia)
 
 # St. Lesia Ukrainka
 ukrainka = my_game.Street('St. Lesia Ukrainka')
-ukrainka.set_description("First location")
+ukrainka.set_description("Second location")
 
 roman = my_game.Kavaler("Roman", "097-777-77-77")
 roman.set_description("Brave gentleman could help you to win 1 killer\nYou can call him whenever \
@@ -35,7 +35,7 @@ ukrainka.set_bad_character(petro)
 
 # St. Ivan Franko
 franko = my_game.Street('St. Ivan Franko')
-franko.set_description("Second location")
+franko.set_description("Third location")
 
 ivan = my_game.Killer("Ivan", "book")
 ivan.set_description("He's been following you for a week\nHe didn't like your sneakers\n\
@@ -45,7 +45,7 @@ franko.set_bad_character(ivan)
 
 # St. Taras Shevchenko
 shevchenko = my_game.Street('St. Taras Shevchenko')
-shevchenko.set_description("Third location")
+shevchenko.set_description("Fourth location")
 
 
 dmytro = my_game.Zbuj("Dmytro", "spider")
@@ -62,7 +62,7 @@ shevchenko.set_kind_character(pavlo)
 
 # Market Square8
 square = my_game.Street('Market Square')
-square.set_description("Fourth location")
+square.set_description("Fifth location")
 
 bohdan = my_game.Killer("Bohdan", "spider")
 bohdan.set_description("Stranger that lives in the town centre and frightens everybody\n\
@@ -71,7 +71,7 @@ square.set_bad_character(bohdan)
 
 # St. Sholem Aleichem
 aleihem = my_game.Street('St. Sholem Aleichem')
-aleihem.set_description("Fifth location")
+aleihem.set_description("Sixth location")
 
 oleg = my_game.Zbuj("Oleg", "knife")
 oleg.set_description("Likes different weapons\nThis time he stole the knife\n\
@@ -81,7 +81,7 @@ aleihem.set_bad_character(oleg)
 
 # St. Stryjska
 stryjska = my_game.Street('St. Stryjska')
-stryjska.set_description("Sixth location")
+stryjska.set_description("Seventh location")
 
 nazar = my_game.Killer("Nazar", "gold")
 nazar.set_description("Oddball who loves to make fun of people\n\
@@ -129,7 +129,6 @@ while dead is False:
                 if inhabitant_bad.fight(fight_with):
                     print(f"Yeah! You won the killer {inhabitant_bad.name}")
                     backpack.remove(fight_with)
-                    print(backpack)
                     inhabitant_bad = None
                 else:
                     print("Unfortunately, you didn't guess")
@@ -175,9 +174,8 @@ while dead is False:
                 print(f"I don't know how to {command2}\nTry again")
         print('\n')
 
-    print("Let's move to another street!")
+    print("Let's move to the neext street!")
     current_street = route.pop(0)
-    print(current_street.name)
     if not route:
         print("Congratulations! You reach the St. Pylyp Orlyk")
         print("See you soon in Drohobych)")
