@@ -94,7 +94,6 @@ class Enemy:
     """
     victories = 0
     def __init__(self, name, monster):
-        super().__init__()
         self.name = name
         self.stranger = monster
         self.conversation = None
